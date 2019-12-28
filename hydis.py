@@ -18,6 +18,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
 	print('Logged in as '+Fore.CYAN+'{0.user}'.format(client))
+	await client.change_presence(status= discord.Status.dnd, activity=discord.Activity(application_id=0, name="thirtyvirus' video", type=discord.ActivityType.watching))
 
 @client.event
 async def on_message(message):
